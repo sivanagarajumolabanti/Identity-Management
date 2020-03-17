@@ -48,7 +48,7 @@ class Register extends Component {
         ]);
 
         this.state = {
-            username: '',
+            // username: '',
             email: '',
             password: '',
             owner: '',
@@ -94,7 +94,7 @@ class Register extends Component {
             this.submitted = true;
             if (validation.isValid) {
                 const newUser = {
-                    username: this.state.username,
+                    // username: this.state.username,
                     email: this.state.email,
                     password: this.state.password,
                     owner: this.state.owner,
