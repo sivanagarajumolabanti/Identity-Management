@@ -1,14 +1,13 @@
 const mongoose = require('mongoose');
-
 const Schema = mongoose.Schema;
 
 const credentialSchema = new Schema({
   Company: {
-    type: String, required: true,
+    type: String, required: true, unique: true,
     trim: true,
     minlength: 1
   },
-  Recipient: {
+  Recipient_Email: {
     type: String, required: true, unique: true,
     trim: true,
     minlength: 1
@@ -20,7 +19,7 @@ const credentialSchema = new Schema({
   },
   Credential_Fields: { type: Array, required: true, trim: true },
   Credential_Hash: {
-    type: String, required: true, unique: true,
+    type: String, required: true, 
     trim: true
   }
 });
