@@ -29,13 +29,13 @@ connection.once('open', () => {
 const credentialRouter = require('./routes/credentials');
 const hash = require('./routes/credentials');
 const credentials = require('./routes/credentials');
-const Users = require('./routes/users')
+const Credential_Entity = require('./routes/Credential_EntityR')
 const adminrouter = require('./routes/admin');
 
 app.use('/credentials', credentialRouter);
 app.use('/get', hash);
 app.use('/get', credentials);
-app.use('/users', Users)
+app.use('/Entity', Credential_Entity)
 app.use('/admin', adminrouter);
 
 
