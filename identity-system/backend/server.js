@@ -30,12 +30,14 @@ const credentialRouter = require('./routes/credentials');
 const hash = require('./routes/credentials');
 const credentials = require('./routes/credentials');
 const Credential_Entity = require('./routes/Credential_EntityR')
+const User = require('./routes/userR')
 const adminrouter = require('./routes/admin');
 
 app.use('/credentials', credentialRouter);
 app.use('/get', hash);
 app.use('/get', credentials);
-app.use('/entity', Credential_Entity)
+app.use('/entity', Credential_Entity);
+app.use('/users', User);
 app.use('/admin', adminrouter);
 
 
